@@ -13,4 +13,16 @@ var blockHour = $(this).attr("id");
 var textEntry = localStorage.getItem(blockHour);
 var textArea = $(this).find(".description");
 textArea.val (textEntry);
+// Current hour to Time Block conditional statements
+// add class to dsiplay correct color
+if (blockHour < currentDay) {
+    $(this).find(".description").addClass("past");
+}
+else if (blockHour == currentHour) {
+    $(this).find(".description").addClass("present");
+}
+else {
+    $(this).find(".description").addClass("future");
+}
+
 });
