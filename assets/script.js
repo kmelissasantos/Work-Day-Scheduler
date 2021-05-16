@@ -1,9 +1,7 @@
 // Display current day in the header 
 var currentDay = $("#currentDay");
-currentDay.text (moment().format('dddd, MMM, Do, YYYY'));
+currentDay.text (moment().format('MMMM Do YYYY, h:mm:ss a'));
 
-// Display current hour
-var currentHour = moment().hour();
 
 // Time-Block Text Areas
 $(".time-block").each(function() {
@@ -25,4 +23,9 @@ else {
     $(this).find(".description").addClass("future");
 }
 
+});
+
+// Function for clicking Save Button 
+$(".saveBtn").on("click", function() {
+var key = $
 });
