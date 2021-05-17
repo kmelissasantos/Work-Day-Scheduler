@@ -27,5 +27,8 @@ else {
 
 // Function for clicking Save Button 
 $(".saveBtn").on("click", function() {
-var key = $
-});
+    var key = $(this).parent().attr("id");
+    var value = $(this).parent().find(".description").val();
+    // Save key and value to Local Storage
+    localStorage.setItem(key,value);
+ });
